@@ -1,1 +1,44 @@
-Hi!
+Besabel Larkin
+
+Pseudocode: Paycheck
+Input hourly wage = variable Wage
+
+(loop 7 times:
+  Input number of hours worked day [loop number]
+  Add to previous number, total = variable HoursWorked)
+
+Multiply HoursWorked x Wage = variable Paycheck
+Print Paycheck
+
+
+
+Pseudocode: Capitalization
+
+initialize string Input
+initialize string Output
+
+Input words to be capitalized = string Input
+  if Input contains number
+  Print text saying no numbers allowed
+  Ask for input again
+
+capitalize Input = string Output
+
+Print Output
+
+
+
+Pseudocode: Addition
+
+variable NumOne
+variable NumTwo
+variable Result
+
+input number = NumOne
+input number = NumTwo
+  if either input is invalid
+  ask again for the invalid input as a number
+
+NumOne + NumTwo = variable Result
+
+print Result
