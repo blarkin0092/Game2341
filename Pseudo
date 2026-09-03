@@ -42,3 +42,62 @@ input number = NumTwo
 NumOne + NumTwo = variable Result
 
 print Result
+
+
+
+
+Pseudocode: Addition with Unknown # of #s
+
+boolean Done
+variable CurrentSum, starts at 0
+
+loop while Done = false
+  input number
+    if not number, disregard old input and ask again
+  number + CurrentSum = CurrentSum
+  ask if user wants to input new number Y/N
+    if N, end loop
+
+print CurrentSum
+
+
+
+
+Pseudocode: Random Number Generator
+
+variable MaxNumber
+variable Result
+boolean Again
+
+loop while Again = true
+  input number = MaxNumber
+    if input invalid, disregard and ask again
+  random between 0 and MaxNumber = Result
+  print Result
+  ask if want to continue Y/N
+    if N, Again = False
+
+
+
+
+Pseudocode: Left and Right
+
+variable Input
+variable ModResult
+variable Left
+variable Right
+boolean LeftRight (left = true, right = false)
+
+loop 10 times
+  generate random number = Input
+    if Input = 0
+      disregard and generate new number
+  mod Input%2 = ModResult
+    if ModResult = 1 
+      LeftRight = true
+      add 1 to Left
+    else LeftRight = false
+      add 1 to Right
+
+print "Left: variable Left"
+print "Right: variable Right"
