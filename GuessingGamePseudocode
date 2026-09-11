@@ -1,0 +1,29 @@
+// Besabel Larkin
+// Guessing Game Homework
+
+
+integer Number
+integer GuessNumber
+boolean isCorrect
+integer GuessCount
+boolean tryAgain
+
+Generate number 0-100 = Number
+
+print "[Instructions for game]"
+
+[loop while GuessCount < 7 and isCorrect = false
+  print "Guess a number!"
+  input = GuessNumber
+    if input is not a number
+    disregard, print "Sorry! I need a number!"
+  check if Number = GuessNumber
+    if true, isCorrect = true
+    else print "Wrong! Try again!", GuessCount + 1 = GuessCount
+]
+  
+if isCorrect = true
+  print "Congratulations! You win!"
+  else print "Sorry, you lose! Try again? Y/N"
+    if Y, restart program
+    if N, end program
