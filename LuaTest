@@ -2,7 +2,7 @@
 print("Hello! Please type a string of characters to be uppercased!")
 
 input = io.read(*l)
-        if 
+        if input = number
         print("Sorry, we cannot accept a number as an input.")
         print("Please input a string of characters.")
 
@@ -28,3 +28,55 @@ print(answer)
 
 -- Addition with unknown number of numbers
 
+while done = false do
+    input = io.read(*n)
+        while input == nil do
+            print("That is not a number.")
+            input = io.read(*n)
+    currentSum = currentSum + input
+    print("Would you like to add another number? (Y/N)")
+    io.read(*l)
+        if input = "N"
+            done = true
+    end
+print(currentSum)
+
+
+-- Random Number Generator
+
+math.randomseed(os.time())
+
+while again = true do
+    print("Input the maximum number.")
+    maxNumber = io.read(*n)
+        if maxNumber = nil
+            print("That is not a number.")
+            maxNumber = io.read(*n)
+    result = math.random(0,maxNumber)
+    print(result)
+    print("Would you like to generate another number? Y/N")
+    answer = io.read()
+        if answer = "Y"
+            again = true
+        else again = false 
+end
+    
+
+-- Left and Right
+
+math.randomseed(os.time())
+
+for x = 1, 11, 1 do
+    ranNumber = math.random(2,100)
+    modResult = math.fmod(ranNumber,2)
+        if modResult = 1
+            print("Left")
+            leftTotal = leftTotal + 1
+        else print("Right")
+            rightTotal = rightTotal + 1
+end
+    
+print(leftTotal)
+print(rightTotal) 
+
+-- End
