@@ -1,0 +1,30 @@
+-- Input to Uppercase
+print("Hello! Please type a string of characters to be uppercased!")
+
+input = io.read(*l)
+        if 
+        print("Sorry, we cannot accept a number as an input.")
+        print("Please input a string of characters.")
+
+output = string.upper(input)
+print(output)
+
+
+-- Addition
+inputOne = to.number(io.read)
+
+    while inputOne == nil do   
+        print("That is not a number.")
+        inputOne = to.number(io.read)
+
+inputTwo = to.number(io.read)
+    while inputTwo == nil do   
+        print("That is not a number.")
+        inputTwo = to.number(io.read)
+
+answer = inputOne + inputTwo
+print(answer)
+
+
+-- Addition with unknown number of numbers
+
