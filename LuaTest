@@ -1,3 +1,7 @@
+--[Besabel Larkin
+9/17/26
+Pseudocode to Lua]
+
 -- Input to Uppercase
 print("Hello! Please type a string of characters to be uppercased!")
 
