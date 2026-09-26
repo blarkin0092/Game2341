@@ -1,0 +1,47 @@
+-- Besabel Larkin
+-- Guessing Game in Lua
+-- 9/25/2026
+
+-- RNG and calls to guarantee randomness
+math.randomseed(os.time())
+math.random()
+math.random()
+math.random()
+math.random()
+math.random()
+
+print("Dialogue!")
+
+again == true -- setting variable for allowing retries
+guessesDone == 0 -- to be safe
+
+while again == true do -- retry loop
+    math.random(1,100) = correctNumber -- Number to guess
+    for guessesDone < 7 do -- main loop for game
+    print("Dialogue here")
+    io.read(*n) = input
+        while input = nil do -- failsafe
+        print("Sorry not number")
+        io.read(*n)
+    if input > correctNumber then
+        print("Sorry too high")
+        guessesDone == guessesDone + 1
+    else if input < correctNumber then
+        print("Sorry too low")
+        guessesDone == guessesDone + 1
+    else do
+        print("Wow congrats you got it right wanna retry")
+        print("Y/N")
+        io.read() == response
+        if response == "Y" then
+            again == true
+        else again == false
+end
+
+if guessesDone == 7 then
+        print("Too many tries you lose wanna try again")
+        print("Y/N")
+        io.read() == response
+        if response == "Y" then
+            again == true
+        else again == false
