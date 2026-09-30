@@ -10,38 +10,46 @@ math.random()
 math.random()
 math.random()
 
-print("Dialogue!")
+print("Hello! Welcome to my 1-100 Guessing Game! You get 7 tries...")
 
-again == true -- setting variable for allowing retries
-guessesDone == 0 -- to be safe
+again = true -- setting variable for allowing retries
+guessesDone = 0 -- to be safe
+
 
 while again == true do -- retry loop
-    math.random(1,100) = correctNumber -- Number to guess
-    for guessesDone < 7 do -- main loop for game
-    print("Dialogue here")
-    io.read(*n) = input
-        while input = nil do -- failsafe
+    correctNumber = math.random(1,100)  -- Number to guess
+    while guessesDone < 7 do -- main loop for game
+        print("Type in a number 1=100 to guess!")
+        input = io.read("*n")
+        while input == nil do -- failsafe
         print("Sorry not number")
-        io.read(*n)
+        io.read("*n")
     if input > correctNumber then
         print("Sorry too high")
-        guessesDone == guessesDone + 1
+        guessesDone = guessesDone + 1
     else if input < correctNumber then
         print("Sorry too low")
-        guessesDone == guessesDone + 1
-    else do
-        print("Wow congrats you got it right wanna retry")
+        guessesDone = guessesDone + 1
+    else print("Wow congrats you got it right wanna retry")
         print("Y/N")
-        io.read() == response
+        response = io.read()
         if response == "Y" then
-            again == true
-        else again == false
+            again = true
+        else again = false
+end
+end
+end
+end
+end
 end
 
 if guessesDone == 7 then
         print("Too many tries you lose wanna try again")
         print("Y/N")
-        io.read() == response
-        if response == "Y" then
-            again == true
-        else again == false
+end
+response = io.read()
+if response == "Y" then
+            again = true
+        else again = false
+    guessesDone = 0
+end
