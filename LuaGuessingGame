@@ -19,37 +19,29 @@ guessesDone = 0 -- to be safe
 while again == true do -- retry loop
     correctNumber = math.random(1,100)  -- Number to guess
     while guessesDone < 7 do -- main loop for game
-        print("Type in a number 1=100 to guess!")
-        input = io.read("*n")
-        while input == nil do -- failsafe
-        print("Sorry not number")
-        io.read("*n")
-    if input > correctNumber then
-        print("Sorry too high")
+        print("Type in a number 1-100 to guess!")
+        input = tonumber(io.read("*n"))
+            if input == nil then -- failsafe
+            print("Sorry, that's not a number... try again?")
+            io.read("*n") end
+        if input > correctNumber then
+        print("Too high!")
         guessesDone = guessesDone + 1
-    else if input < correctNumber then
-        print("Sorry too low")
+        else if input < correctNumber then
+        print("Too low!")
         guessesDone = guessesDone + 1
-    else print("Wow congrats you got it right wanna retry")
+        else print("Wow, congrats! You got it right! Wanna play again?")
+        print("Y/N") end 
+        response = io.read("*l")
+        if response == "N" then
+            again = false end
+    if guessesDone == 7 then
+        print("You took too many tries... you lose! Wanna try again?")
         print("Y/N")
-        response = io.read()
+        response = io.read() end
         if response == "Y" then
             again = true
-        else again = false
-end
-end
-end
-end
-end
-end
-
-if guessesDone == 7 then
-        print("Too many tries you lose wanna try again")
-        print("Y/N")
-end
-response = io.read()
-if response == "Y" then
-            again = true
-        else again = false
-    guessesDone = 0
+        else again = false end
+    guessesDone = 0 end
+    end
 end
