@@ -51,20 +51,20 @@ end
 --UPDATE
 -------------------------------------------------
 function love.update(dt)
+  speed = 1 -- variable for speed increase powerup
   for i, v in ipairs(starty) do
     --if burger hits the bottom of the screen, lua quits (we lose)
     if starty[i] + burger:getHeight() >= love.graphics.getHeight() then
       --print("over the edge")
       love.event.quit()
     end
+    -- Attempting to do speed power up: If burger overlaps power up, speed increases for 5 seconds then goes to normal
+    if burger:getHeight() == powerup:getHeight() then
+    speed = 2
+    wait(5)
+    speed = 1
     --burgers move down 
     starty[i] = starty[i] + 80 * speed * dt
-  end
-  -- Attempting to do speed power up: If burger overlaps power up, speed increases for 5 seconds then goes to normal
-  if burger:getHeight() == powerup:getHeight() then
-  speed = 2
-  wait(5)
-  speed = 1
   end
 end
 
