@@ -26,7 +26,7 @@ function love.load()
             0 - math.random(burger:getHeight(), burger:getHeight() * 2),
             0 - math.random(burger:getHeight(), burger:getHeight() * 2)}
   positionx = math.random(100,600)
-  positiony = math.random(100,600)
+  positiony = math.random(350,500)
 end
 
 -------------------------------------------------
@@ -72,9 +72,6 @@ end
 --DRAW
 -------------------------------------------------
 function love.draw()
-  colorR = math.random(1,255)
-  colorG = math.random(1,255)
-  colorB = math.random(1,255)
   love.graphics.draw(backgroundImage, 0, 0)
   -- puts powerup in random position
   love.graphics.draw(powerup, positionx, positiony)
