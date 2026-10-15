@@ -25,6 +25,8 @@ function love.load()
             0 - math.random(burger:getHeight(), burger:getHeight() * 2),
             0 - math.random(burger:getHeight(), burger:getHeight() * 2),
             0 - math.random(burger:getHeight(), burger:getHeight() * 2)}
+  positionx = math.random(100,600)
+  positiony = math.random(100,600)
 end
 
 -------------------------------------------------
@@ -51,20 +53,18 @@ end
 --UPDATE
 -------------------------------------------------
 function love.update(dt)
-  speed = 1 -- variable for speed increase powerup
   for i, v in ipairs(starty) do
     --if burger hits the bottom of the screen, lua quits (we lose)
     if starty[i] + burger:getHeight() >= love.graphics.getHeight() then
       --print("over the edge")
       love.event.quit()
     end
-    -- Attempting to do speed power up: If burger overlaps power up, speed increases for 5 seconds then goes to normal
-    if burger:getHeight() == powerup:getHeight() then
-    speed = 2
-    wait(5)
-    speed = 1
     --burgers move down 
-    starty[i] = starty[i] + 80 * speed * dt
+    starty[i] = starty[i] + 80 * dt
+
+    if positionx >= startx[i] and positionx <= startx[i] + burger:getWidth() and positiony >= starty[i] and positiony <= starty[i] + burger:getHeight() then
+        powered = true
+      end
   end
 end
 
@@ -72,13 +72,18 @@ end
 --DRAW
 -------------------------------------------------
 function love.draw()
-  
+  colorR = math.random(1,255)
+  colorG = math.random(1,255)
+  colorB = math.random(1,255)
   love.graphics.draw(backgroundImage, 0, 0)
-  -- to test for now
-  love.graphics.draw(powerup, 150, 150)
-  --
+  -- puts powerup in random position
+  love.graphics.draw(powerup, positionx, positiony)
+
   --draw each burger at their respective x and y
   for i, v in ipairs(startx) do
+    if powered = true then
+      love.graphics.scale (.5, .5)
+    end
     love.graphics.draw(burger, startx[i], starty[i])
   end
   
