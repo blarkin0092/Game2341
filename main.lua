@@ -58,13 +58,13 @@ function love.update(dt)
       love.event.quit()
     end
     --burgers move down 
-    starty[i] = starty[i] + 80 * dt
+    starty[i] = starty[i] + 80 * speed * dt
   end
   -- Attempting to do speed power up: If burger overlaps power up, speed increases for 5 seconds then goes to normal
   if burger:getHeight() == powerup:getHeight() then
-  starty[i] = starty[i] + 160 * dt
+  speed = 2
   wait(5)
-  starty[i] = starty[i] + 80 * dt
+  speed = 1
   end
 end
 
@@ -74,10 +74,12 @@ end
 function love.draw()
   
   love.graphics.draw(backgroundImage, 0, 0)
+  -- to test for now
+  love.graphics.draw(powerup, 150, 150)
+  --
   --draw each burger at their respective x and y
   for i, v in ipairs(startx) do
     love.graphics.draw(burger, startx[i], starty[i])
   end
-  -- to test for now
-  love.graphics.draw(powerup, 0, 0)
+  
 end
