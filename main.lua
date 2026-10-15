@@ -81,7 +81,7 @@ function love.draw()
 
   --draw each burger at their respective x and y
   for i, v in ipairs(startx) do
-    if powered = true then
+    if powered == true then
       love.graphics.scale (.5, .5)
     end
     love.graphics.draw(burger, startx[i], starty[i])
