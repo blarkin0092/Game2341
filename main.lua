@@ -61,15 +61,12 @@ function love.update(dt)
     starty[i] = starty[i] + 80 * dt
   end
   -- Attempting to do speed power up: If burger overlaps power up, speed increases for 5 seconds then goes to normal
-  if burger:getHeight() = powerup:getHeight() then
+  if burger:getHeight() == powerup:getHeight() then
   starty[i] = starty[i] + 160 * dt
   wait(5)
   starty[i] = starty[i] + 80 * dt
   end
 end
-
-
-
 
 -------------------------------------------------
 --DRAW
