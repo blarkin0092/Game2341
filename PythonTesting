@@ -17,13 +17,15 @@ print ("You will be ", age + 5, " in 5 years!")
 
 # Pseudocode :D
 
-# All Uppercase
+# All Uppercase ---
 
 inp = input("Type anything in lowercase to make it uppercase: ")
+
 uppercase = inp.upper
+
 print (uppercase)
 
-# Add Inputs
+# Add Inputs ---
 
 x = input("Enter first number here: ")
 y = input("Enter second number here: ")
@@ -33,3 +35,53 @@ y = int(y)
 
 print(x+y)
 
+# Get unknown number of #'s and add ---
+
+cont = True
+total = 0
+currentnum = None
+confirm = None
+
+while cont == None:
+    currentnum = input("Type a number here: ")
+        while not currentnum.isDigit():
+            print ("That is not a number! Try again :)")
+            currentnum = input()
+    currentnum = int(currentnum)
+    total = total + currentnum
+    print("Your current total is ", total, ".")
+    confirm = input("Would you like to continue? Y/N")
+        if confirm == "N"
+        cont = False
+        else cont = True
+
+# Define Max number and generate number ---
+
+import random
+
+cont = True
+confirm = None
+
+while cont == True:
+    maximum = input("Type in the maximum number: ")
+        while not maximum.isDigit():
+            print ("That is not a number! Try again :)")
+            maximum = input()
+    maximum = int.maximum
+    print (random.randint(1, maximum))
+    confirm = input("Try again? Y/N")
+        if confirm == "N"
+        cont = False
+        else cont = True
+
+# Right and Left ---
+
+import random
+s = 1
+
+while s < 10:
+    inp = random.randint(1, 100)
+    if inp%2 > 0
+     print ("Left!")
+    else print ("Right!)")
+  s = s + 1
