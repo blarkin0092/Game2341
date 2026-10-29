@@ -1,0 +1,35 @@
+import random
+
+print(random.random())
+print(random.randint(1,100))
+
+age = input("What is your age?")
+
+print (age)
+
+while not age.isDigit():
+    print ("That is not a number! Try again :)")
+    age = input("What is your age?")
+
+age = int(age)
+
+print ("You will be ", age + 5, " in 5 years!")
+
+# Pseudocode :D
+
+# All Uppercase
+
+inp = input("Type anything in lowercase to make it uppercase: ")
+uppercase = inp.upper
+print (uppercase)
+
+# Add Inputs
+
+x = input("Enter first number here: ")
+y = input("Enter second number here: ")
+
+x = int(x)
+y = int(y)
+
+print(x+y)
+
