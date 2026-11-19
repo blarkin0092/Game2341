@@ -1,0 +1,31 @@
+
+
+# ---
+
+# Ending 1: Drown
+# Ending 2: Become a Pirate
+# Ending 3: Bethrothed to King
+# Ending 4: (Technically multiple) Booby Trapped
+# Ending 5: Return the item
+# Ending 6: (Secret) Defeat villain with the pirate army
+
+# ---
+
+print ("Something")
+name = input("Name?")
+print ("Something...")
+
+print ("MWA HA HA!!! Evil Speech!!")
+print ("Find my item or die!!!")
+
+print ("Sent to piracy")
+
+
+
+
+
+
+
+
+
+print ("To be continued... (no it won't.)")
