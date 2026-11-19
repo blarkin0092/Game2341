@@ -1,8 +1,12 @@
 
+# Clickbait
+# 11/19/2026
+# Python Text Adventure
 
 # ---
+# Endings:
 
-# Ending 1: Drown
+# Ending 1: Drown ✓
 # Ending 2: Become a Pirate
 # Ending 3: Bethrothed to King
 # Ending 4: (Technically multiple) Booby Trapped
@@ -10,10 +14,16 @@
 # Ending 6: (Secret) Defeat villain with the pirate army
 
 # ---
+# Variables:
+answer = None
+
+
+# ---
+print ("Please respond to any prompts with only a single digit to mark your answer.")
 
 print ("Something")
 name = input("Name?")
-print ("Something...")
+print (name + ", something...")
 
 print ("MWA HA HA!!! Evil Speech!!")
 print ("Find my item or die!!!")
@@ -22,20 +32,38 @@ print ("Sent to piracy")
 
 print ("Oh god what do i do")
 print ("1. Scream at the top of your lungs.")
-print ("2. Flail around to get their attention.")
+print ("2. Flail around in the water.")
 print ("3. Lay on your back.")
+answer = input("What do you do...?")
 
-match value
-    case 1:
-        result = "-"
+theonedictionary = {
+    "1": "You get their attention and are brought up",
+    "2": "You drown moron, ending 1: moron drowned",
+    "3": "You say alive long enough to be spotted, joys!"
+    }
+print(theonedictionary[answer])
 
-    case 2:
-        result = "-"
+if input == 2:
+        print ("thanks for playing")
+        quit()
 
-    case 3:
-        result = "-"
+print ("now you on ship yay")
+print ("Wow where did you come from :eyes:")
+print ("Wait ur a landlubber you gotta die")
 
-print (result)
-print ()
+while answer is None:
+    print ("1. Disarm the guy next to you.")
+    print ("2. Run away.")
+    answer = input("What do you do...?")
+
+    if answer == "1":
+        print ("Wow you just robbed a blind man anyways everyones like woah")
+    elif answer == "2":
+        print ("Theres nowhere to go so you jump off the ship and they get you back up")
+    else: 
+        print ("Invalid")
+        answer = None
+
+print ("Wanna join me crew random guy")
 
 print ("To be continued... (no it won't.)")
