@@ -20,12 +20,22 @@ print ("Find my item or die!!!")
 
 print ("Sent to piracy")
 
+print ("Oh god what do i do")
+print ("1. Scream at the top of your lungs.")
+print ("2. Flail around to get their attention.")
+print ("3. Lay on your back.")
 
+match value
+    case 1:
+        result = "-"
 
+    case 2:
+        result = "-"
 
+    case 3:
+        result = "-"
 
-
-
-
+print (result)
+print ()
 
 print ("To be continued... (no it won't.)")
