@@ -23,7 +23,7 @@ print("What is your name?")
 name = input("Name?")
 print(name + ", interesting...")
 
-print("Please respond to any prompts bryond this point with only a single digit to mark your answer.")
+print("Please respond to any prompts beyond this point with only a single digit to mark your answer.")
 
 print("''MWA HA HA!!! You, " + name + ", will be my new evil minion!!!''")
 print("''Find my rubber ball or die!!!''")
@@ -78,6 +78,8 @@ print("The crowd steps to the side to reveal the captain. She looks you over wit
 print("''...a brave one, ain't ye? I appreciate some confidence 'round these parts.''")
 print("''Name's Cassie. COuld be the name of yer new captain, if you'd let it be.''")
 
+answer = None
+
 while answer is None:
     print ("1. Yes.")
     print ("2. No.")
@@ -109,7 +111,7 @@ print("''Just one of you will do. How about... that one?'' He points to you.")
 if pirate == True:
     print("The captain objects. ''Aye, we would never give one of our own to ye!''")
     print("Your crew cheers as you all run into the temple together, King be damned.")
-    else 
+else:
     while answer is None:
         print ("1. Yes")
         print ("2. No")
@@ -247,13 +249,13 @@ while answer is None:
                 print("Your captain gives you a gold doubloon as a parting gift, just as the way home closes behind her.")
                 print("...wait, how are YOU going to get home??")
                 print("* Good Ending *")
-                else
+            else:
                 print("...but you don't have anything to take advantage of it.")
                 print("Slowly, your crew is taken out, and you are left for last.")
                 print("''Think of this the next time you try something. You will not be given another chance, minion.''")
                 print("The villain leaves with his rubber ball to take over the world.")
                 print("* Evil Ending *")
-            else 
+        else: 
             print("The crew cares not for you. The villain's beam hits you, and you disintegrate.")
             print("The villain takes their rubber ball and leaves to take over the world.")
             print("* Evil Ending *")
