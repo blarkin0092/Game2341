@@ -7,23 +7,22 @@
 # Endings:
 
 # Ending 1: Drown ✓
-# Ending 2: Become a Pirate
-# Ending 3: Bethrothed to King
-# Ending 4: (Technically multiple) Booby Trapped
-# Ending 5: Return the item
-# Ending 6: (Secret) Defeat villain with the pirate army
+# Ending 2: Become a Pirate ✓
+# Ending 3: Bethrothed to King ✓
+# Ending 4: (Technically multiple) Booby Trapped 
+# Ending 5: Return the item 
+# Ending 6: (Secret) Defeat villain with the pirate army 
 
 # ---
-# Variables:
+# Initial Variables:
 answer = None
 
-
 # ---
-print ("Please respond to any prompts with only a single digit to mark your answer.")
-
 print ("Something")
 name = input("Name?")
 print (name + ", something...")
+
+print ("Please respond to any prompts bryond this point with only a single digit to mark your answer.")
 
 print ("MWA HA HA!!! Evil Speech!!")
 print ("Find my item or die!!!")
@@ -36,20 +35,38 @@ print ("2. Flail around in the water.")
 print ("3. Lay on your back.")
 answer = input("What do you do...?")
 
-theonedictionary = {
+# The one dictionary because I refuse to use it anywhere else.
+while answer is None:
+    theonedictionary = {
     "1": "You get their attention and are brought up",
     "2": "You drown moron, ending 1: moron drowned",
     "3": "You say alive long enough to be spotted, joys!"
+    "": "Invalid response. Try again."
     }
-print(theonedictionary[answer])
-
-if input == 2:
-        print ("thanks for playing")
-        quit()
+    print(theonedictionary[answer])
+    if answer == "Invalid response. Try again.":
+        answer = None
 
 print ("now you on ship yay")
 print ("Wow where did you come from :eyes:")
 print ("Wait ur a landlubber you gotta die")
+
+while answer is None: # Main Loop for choices
+    print ("1. Disarm the guy next to you.")
+    print ("2. Run away.")
+    answer = input("What do you do...?")
+
+    if answer == "1":
+        print ("Wow you just robbed a blind man anyways everyones like woah")
+    elif answer == "2":
+        print ("Theres nowhere to go so you jump off the ship and they get you back up")
+    else: 
+        print ("Invalid")
+        answer = None
+
+answer = None # Resets answer to none to be able to use same loop later
+
+print ("Wanna join me crew random guy")
 
 while answer is None:
     print ("1. Disarm the guy next to you.")
@@ -64,6 +81,58 @@ while answer is None:
         print ("Invalid")
         answer = None
 
-print ("Wanna join me crew random guy")
+answer = None
+
+print("Suddenly you hit land. King is there. offers access to temple with coin and freedom for pirates in exchange for betrothal")
+
+while answer is None:
+    print ("1. yes")
+    print ("2. no")
+    answer = input("What do you do...?")
+
+    if answer == "1":
+        print ("Wow crazy youre btrothed and die")
+        quit()
+    elif answer == "2":
+        print ("You refuse and run into the temple anyway")
+    else: 
+        print ("Invalid")
+        answer = None
+
+answer = None
+
+print("")
+
+while answer is None:
+    print ("1. Disarm the guy next to you.")
+    print ("2. Run away.")
+    answer = input("What do you do...?")
+
+    if answer == "1":
+        print ("Wow you just robbed a blind man anyways everyones like woah")
+    elif answer == "2":
+        print ("Theres nowhere to go so you jump off the ship and they get you back up")
+    else: 
+        print ("Invalid")
+        answer = None
+
+answer = None
+
+print("")
+
+while answer is None:
+    print ("1. Disarm the guy next to you.")
+    print ("2. Run away.")
+    answer = input("What do you do...?")
+
+    if answer == "1":
+        print ("Wow you just robbed a blind man anyways everyones like woah")
+    elif answer == "2":
+        print ("Theres nowhere to go so you jump off the ship and they get you back up")
+    else: 
+        print ("Invalid")
+        answer = None
+
+answer = None
 
 print ("To be continued... (no it won't.)")
