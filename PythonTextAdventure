@@ -8,9 +8,9 @@
 
 # Ending 1: Drown ✓
 # Ending 2: Bethrothed to King ✓
-# Ending 3: (Technically multiple) Booby Trapped 
-# Ending 4: Return the item 
-# Ending 5: (Secret) Defeat villain with the pirate army 
+# Ending 3: (Multiple versions) Booby Trapped ✓
+# Ending 4: Return the item ✓
+# Ending 5: Defeat villain with the pirate army ✓
 
 # ---
 # Initial Variables:
@@ -19,55 +19,64 @@ pirate = False
 rock = False
 
 # ---
-print ("Something")
+print("What is your name?")
 name = input("Name?")
-print (name + ", something...")
+print(name + ", interesting...")
 
-print ("Please respond to any prompts bryond this point with only a single digit to mark your answer.")
+print("Please respond to any prompts bryond this point with only a single digit to mark your answer.")
 
-print ("MWA HA HA!!! Evil Speech!!")
-print ("Find my item or die!!!")
+print("''MWA HA HA!!! You, " + name + ", will be my new evil minion!!!''")
+print("''Find my rubber ball or die!!!''")
 
-print ("Sent to piracy")
+print("You're blasted through the portal, landing in water. Some of it lands in your mouth, revealing that it's salty. Sone kind of ocean...")
+print("Just then, you see a wooden ship approaching. It has a black flag with a skull on it.")
+print("Pirates!")
 
-print ("Oh god what do i do")
-print ("1. Scream at the top of your lungs.")
-print ("2. Flail around in the water.")
-print ("3. Lay on your back.")
+print("1. Scream at the top of your lungs.")
+print("2. Flail around in the water.")
+print("3. Lay on your back.")
 answer = input("What do you do...?")
 
 # The one dictionary because I refuse to use it anywhere else.
-while answer is None:
-    theonedictionary = {
-    "1": "You get their attention and are brought up",
-    "2": "You drown moron, ending 1: moron drowned",
-    "3": "You say alive long enough to be spotted, joys!"
-    "": "Invalid response. Try again."
-    }
-    print(theonedictionary[answer])
-    if answer == "Invalid response. Try again.":
-        answer = None
 
-print ("now you on ship yay")
-print ("Wow where did you come from :eyes:")
-print ("Wait ur a landlubber you gotta die")
+theonedictionary = {
+"1": "One of them hears you! They lower the anchor and assist you onto the ship.",
+"2": "You tire yourself out, and before you can be saves, you sink.",
+"3": "You don't grab their attention immediately, but one of them spots you! They lower the anchor and help you climb on."
+}
+print(theonedictionary[answer])
+
+if answer == "2":
+    print("Ending 1: Drowned")
+    quit()
+
+print("Now safe on the ship, you look at the crowd. So many new faces, all in tattered clothes with varying amounts of eyepatches, hooks, and other oddly stereotypical accessories.")
+print("One of them looks at you.")
+print("''Aye, you be a landlubber, ain't you?''")
+print("You nod, not sure what else to do. In response, they raise their blade. Uh oh.")
 
 while answer is None: # Main Loop for choices
-    print ("1. Disarm the guy next to you.")
-    print ("2. Run away.")
+    print("1. Disarm the guy next to you.")
+    print("2. Run away.")
     answer = input("What do you do...?")
 
     if answer == "1":
-        print ("Wow you just robbed a blind man anyways everyones like woah")
+        print("Luckily, the pirate next to you has two eyepatches. You take their sword and raise it in defense.")
     elif answer == "2":
-        print ("Theres nowhere to go so you jump off the ship and they get you back up")
+        print("With nowhere to go, you throw yourself off the ship.")
+        print("A valiant effort, but a failed one nonetheless, as the pirates simply grab you back onto the ship.")
+        print("At least you tried?")
     else: 
-        print ("Invalid")
+        print("Invalid")
         answer = None
 
 answer = None # Resets answer to none to be able to use same loop later
 
-print ("Wanna join me crew random guy")
+print("Before anything else can happen, though, a loud voice rings out.")
+print("''AYE! Cut the fightin' out!''")
+print("The crowd steps to the side to reveal the captain. She looks you over with her one eye.")
+print("''...a brave one, ain't ye? I appreciate some confidence 'round these parts.''")
+print("''Name's Cassie. COuld be the name of yer new captain, if you'd let it be.''")
 
 while answer is None:
     print ("1. Yes.")
@@ -75,25 +84,32 @@ while answer is None:
     answer = input("What do you do...?")
 
     if answer == "1":
-        print ("Yes now we do our job and get booty")
+        print ("''Welcome to me crew, then.''")
         pirate = True
     elif answer == "2":
-        print ("Oh whatever you still cool so we'll take you to land")
+        print ("''...hm. A shame. Best we get ye to land before any more 'incidents' happen, then.''")
     else: 
         print ("Invalid")
         answer = None
 
 answer = None
 
+print("Another voice rings out, followed by cheers. It appears land has been found. The ship steers towards it.")
+print("Now on land, you all are immediately arrested. Figured. You all look like pirates.")
+print("Instead of jail, though, you are taken to the king.")
+
 # Kingdom Section 
-print("Suddenly you hit land. King is there. offers access to temple in exchange for betrothal")
+print("The king's palace is about as extravagant as you can guess. Gold and silver everywhere, accented by many purples and reds.")
+print("The king himself sits on a golden throne, a second next to him barren.")
+print("He speaks. ''I've brought you all for... an offer. You see, I have been a lone ruler for a long time.''")
+print("''And I look weak ruling alone. To remedy that, I wish for a foreign companion.''")
+print("''In exchange, I will grant you all pardons for your crimes, as well as access to that temple I know you've been eyeing.''")
+print("He looks you all over.")
+print("''Just one of you will do. How about... that one?'' He points to you.")
 if pirate = True:
-    print("''Just one of your crewmates will do. How about... that one?'' He points to you.")
     print("The captain objects. ''Aye, we would never give one of our own to ye!''")
     print("Your crew cheers as you all run into the temple together, King be damned.")
     else 
-    ("''Just one of you will do. How about... that one?'' He points to you.")
-    print("Do you accept the deal?")
     while answer is None:
         print ("1. Yes")
         print ("2. No")
@@ -105,7 +121,8 @@ if pirate = True:
             print("* Betrothed Ending *")
             quit()
         elif answer == "2":
-            print("You refuse and run into the temple anyway")
+            print("You refuse. The king is clearly outraged, shouting for his guards to sieze you all. The pirate captain nudges you towards the temple.")
+            print("The hint is taken. You follow the crew through the large doors as yelling continues to commence behind you.")
         else: 
             print("Invalid")
             answer = None
@@ -113,51 +130,63 @@ if pirate = True:
 answer = None
 
 # Temple (multiple traps)
-print("Kings guards chase you into the ruins, insert trap here")
+print("The king's guards chase you into the ruins, though they stop in place very soon after.")
+print("You turn to face forward and see rows of holes on the walls.")
 
 while answer is None:
-    print ("1. Option One.")
-    print ("2. Option Two.")
+    print ("1. Crouch down and crawl underneath them.")
+    print ("2. Throw something in the way of the holes.")
     answer = input("What do you do...?")
 
     if answer == "1":
-        print("Right/Wrong")
+        print("You forgot to look up... there's holes there, too. You're turned into an arrow cushion.")
+        print("* Trap Ending *")
+        quit()
     elif answer == "2":
-        print("Right/Wrong")
+        print("You pick up a bundle of pebbles and throw one at the holes. The trap triggers prematurely, ending right before you are caught.")
+        print("The group continues onward.")
+        rock = True
     else: 
         print("Invalid")
         answer = None
 
 answer = None
 
-print("Done, insert trap 2 here")
+print("The guards continue to follow, nearly on your tail now due to the delay.")
+print("Your next room reveals a spike pit, uncrossable without help.")
 
 while answer is None:
-    print("1. Option One.")
-    print("2. Option Two.")
+    print("1. Step to the side.")
+    print("2. Attempt to bribe the guards.")
     answer = input("What do you do...?")
 
     if answer == "1":
-        print("Right/Wrong")
+        print("At the last moment,you step aside. The guards fall into the pit, making a convenient platform to cross.")
+        print("The group continues onward.")
     elif answer == "2":
-        print("Right/Wrong")
+        print("You attempt to bribe the guards. They don't fall for it. But you do! Into the pit.")
+        print("* Trap Ending *")
+        quit()
     else: 
         print("Invalid")
         answer = None
 
 answer = None
 
-print("Done, insert trap 3 here")
+print("With no more trouble behind you, there is a new one ahead. ")
 
 while answer is None:
-    print("1. Option One.")
+    print("1. Use your rocks to .")
     print("2. Option Two.")
     answer = input("What do you do...?")
 
     if answer == "1":
-        print("Right/Wrong")
+        print("Right/Wrong.")
+        print("The group continues onward.")
     elif answer == "2":
-        print("Right/Wrong")
+        print("Y")
+        print("* Trap Ending *")
+        quit()
     else: 
         print("Invalid")
         answer = None
@@ -166,17 +195,21 @@ answer = None
 
 # Retrieving the Object
 print("No more traps, we did it")
-print("Object stands on podium")
+print("A rubber ball sits on a podium. It must be what you're looking for.")
+print("Your captain squints at the display. She must suspect something is wrong.")
+print("You have one rock let. Do you use it?")
 
 while answer is None:
-    print("1. Throw final rock at the item")
-    print("2. Grab it with your hands")
+    print("1. Throw your final rock at the ball.")
+    print("2. Just grab it with your hands.")
     answer = input("What do you do...?")
 
     if answer == "1":
-        print("Trigger trap, lose rock")
+        print("As soon as the rock hits the ball, a large stone brick falls from above, crushing it.")
+        rock = False
+        print("The ball survives, though, bouncing to your feet. You pick it up.")
     elif answer == "2":
-        print("Trigger final trap but you keep rock")
+        print("Carefully, you place a hand onto the ")
     else: 
         print("Invalid")
         answer = None
@@ -184,20 +217,44 @@ while answer is None:
 answer = None
 
 # Returning to Villain/Final Endings
-print("You you got my thing now give it")
+print("You return through the portal, pirate crew behind you.")
+print("The villain is in a chair. He looks up from his book as you arrive, grinning upon sight of the ball in your hands.")
 
 while answer is None:
-    print("1. Give the object.")
+    print("1. Give the rubber ball.")
     print("2. Refuse.")
     answer = input("What do you do...?")
 
     if answer == "1":
-        print("Yay") # Evil Ending
+        print("You hand the rubber ball over. The villain laughs evilly.")
+        print("''MWA HA HA!!! NOW I CAN TAKE OVER THE WORLD!!! AND MAKE IT EVIL!!!!''")
+        print("The villain evilly breaks through the evil ceiling. What have you done. Evilly.") # Evil Ending
+        print("* Evil Ending *")
         quit()
     elif answer == "2":
         print("Boo give it back!!!")
         if pirate = True:
-            print("Your crewmates come to your aid! They deflect the beam back to the villain, though he dodges.")
+            print("Your crewmates come to your aid! They deflect the beam back to the villain, though he dodges the reflected attack.")
+            print("The villain sneers. ''Of ocurse you have allies. Pathetic. I will kill you all!!!''")
+            print("The villain attempts to fight your crew. The battle is fierce, but you do not have a weapon, so you stay by the sidelines.")
+            print("Suddenly, you see an opening...")
+            if rock = True:
+                print("...and uou throw your final rock at the villain! It distracts him just long enough for your captain to deal the final blow.")
+                print("Victory!!! You all celebrate, though the crew must leave before the portal closes.")
+                print("Your captain gives you a gold doubloon as a parting gift, just as the way home closes behind her.")
+                print("...wait, how are YOU going to get home??")
+                print("* Good Ending *")
+                else
+                print("...but you don't have anything to take advantage of it.")
+                print("Slowly, your crew is taken out, and you are left for last.")
+                print("''Think of this the next time you try something. You will not be given another chance, minion.''")
+                print("The villain leaves with his rubber ball to take over the world.")
+                print("* Evil Ending *")
+            else 
+            print("The crew cares not for you. The villain's beam hits you, and you disintegrate.")
+            print("The villain takes their rubber ball and leaves to take over the world.")
+            print("* Evil Ending *")
+            quit()
     else: 
         print("Invalid")
         answer = None
