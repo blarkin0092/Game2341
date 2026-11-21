@@ -106,7 +106,7 @@ print("''And I look weak ruling alone. To remedy that, I wish for a foreign comp
 print("''In exchange, I will grant you all pardons for your crimes, as well as access to that temple I know you've been eyeing.''")
 print("He looks you all over.")
 print("''Just one of you will do. How about... that one?'' He points to you.")
-if pirate = True:
+if pirate == True:
     print("The captain objects. ''Aye, we would never give one of our own to ye!''")
     print("Your crew cheers as you all run into the temple together, King be damned.")
     else 
@@ -209,7 +209,9 @@ while answer is None:
         rock = False
         print("The ball survives, though, bouncing to your feet. You pick it up.")
     elif answer == "2":
-        print("Carefully, you place a hand onto the ")
+        print("Carefully, you place a hand onto the pedestal, pulling it back as you hear something above you.")
+        print("A brick falls from above onto right where your hand was. Lucky you.")
+        print("The ball survives, though, bouncing to your feet. You pick it up.")
     else: 
         print("Invalid")
         answer = None
@@ -219,6 +221,7 @@ answer = None
 # Returning to Villain/Final Endings
 print("You return through the portal, pirate crew behind you.")
 print("The villain is in a chair. He looks up from his book as you arrive, grinning upon sight of the ball in your hands.")
+print("''Perfect job, minion! Now hand it over.''")
 
 while answer is None:
     print("1. Give the rubber ball.")
@@ -233,12 +236,12 @@ while answer is None:
         quit()
     elif answer == "2":
         print("Boo give it back!!!")
-        if pirate = True:
+        if pirate == True:
             print("Your crewmates come to your aid! They deflect the beam back to the villain, though he dodges the reflected attack.")
             print("The villain sneers. ''Of ocurse you have allies. Pathetic. I will kill you all!!!''")
             print("The villain attempts to fight your crew. The battle is fierce, but you do not have a weapon, so you stay by the sidelines.")
             print("Suddenly, you see an opening...")
-            if rock = True:
+            if rock == True:
                 print("...and uou throw your final rock at the villain! It distracts him just long enough for your captain to deal the final blow.")
                 print("Victory!!! You all celebrate, though the crew must leave before the portal closes.")
                 print("Your captain gives you a gold doubloon as a parting gift, just as the way home closes behind her.")
