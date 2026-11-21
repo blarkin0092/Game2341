@@ -69,8 +69,8 @@ answer = None # Resets answer to none to be able to use same loop later
 print ("Wanna join me crew random guy")
 
 while answer is None:
-    print ("1. Disarm the guy next to you.")
-    print ("2. Run away.")
+    print ("1. Yes.")
+    print ("2. No.")
     answer = input("What do you do...?")
 
     if answer == "1":
@@ -83,6 +83,7 @@ while answer is None:
 
 answer = None
 
+# Kingdom Section 
 print("Suddenly you hit land. King is there. offers access to temple with coin and freedom for pirates in exchange for betrothal")
 
 while answer is None:
@@ -91,7 +92,7 @@ while answer is None:
     answer = input("What do you do...?")
 
     if answer == "1":
-        print ("Wow crazy youre btrothed and die")
+        print ("Wow crazy youre btrothed and die") # Betrothal Ending
         quit()
     elif answer == "2":
         print ("You refuse and run into the temple anyway")
@@ -101,6 +102,27 @@ while answer is None:
 
 answer = None
 
+# Temple (multiple traps)
+print("Kings guards chase you into the ruins, insert trap here")
+
+while answer is None:
+    print ("1. Option One.")
+    print ("2. Option Two.")
+    answer = input("What do you do...?")
+
+    if answer == "1":
+        print ("Right/Wrong")
+    elif answer == "2":
+        print ("Right/Wrong")
+    else: 
+        print ("Invalid")
+        answer = None
+
+answer = None
+
+
+
+# Retrieving the Object
 print("")
 
 while answer is None:
@@ -118,6 +140,8 @@ while answer is None:
 
 answer = None
 
+
+# Returning to Villain/Final Endings
 print("")
 
 while answer is None:
